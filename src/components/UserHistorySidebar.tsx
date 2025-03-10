@@ -1,5 +1,6 @@
 import { Person } from "@/types/person";
 import { History, UserX } from "lucide-react";
+import Image from "next/image";
 
 interface UserHistorySidebarProps {
   personHistory: Person[];
@@ -30,7 +31,7 @@ export function UserHistorySidebar({ personHistory }: UserHistorySidebarProps) {
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
               >
                 <div className="relative">
-                  <img
+                  <Image
                     src={person.picture}
                     alt={person.name}
                     className="w-10 h-10 rounded-full object-cover border border-gray-200 dark:border-slate-600"

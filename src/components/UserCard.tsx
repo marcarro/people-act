@@ -1,6 +1,7 @@
 import { Person } from "@/types/person";
 import { Eye, EyeOff, RotateCw, Mail, Phone, Calendar, User } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 interface UserCardProps {
   currentPerson: Person | null;
@@ -45,7 +46,7 @@ export function UserCard({
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-shrink-0 flex justify-center">
               <div className="relative">
-                <img
+                <Image
                   src={currentPerson.picture}
                   alt={currentPerson.name}
                   className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
@@ -114,7 +115,7 @@ export function UserCard({
           </div>
         ) : (
           <div className="py-16">
-            <p className="text-center text-gray-500 dark:text-gray-400">Click "New User" to fetch random user data</p>
+            <p className="text-center text-gray-500 dark:text-gray-400">Click &quot;New User&quot; to fetch random user data</p>
           </div>
         )}
       </div>
